@@ -4,7 +4,8 @@
  */
 
 /* Global Variables */
-
+var trainer = false;
+var count = 0;
 
 /** 
  * main  
@@ -14,17 +15,34 @@
  */
 /* Main */
 function main(){
-
+    let again = true;
+    while (again == true) {
+        trainer = confirm("Trainer mode?");
+        playNim();
+        again = confirm("Play again?");
+    }
 }
 
 /** 
  * playNim 
- * plays a game with user first and computer second. Winner declared in an alert box. 
+ * plays a game with user st and computer second. Winner declared in an alert box. 
  * @param none 
  * @return none
  */
 function playNim(){
-
+    count = 0;
+    while (count < 21) {
+        playerTurn();
+        if (count > 21) {
+            alert("You lose!");
+        }
+        else {
+            cpuTurn();
+            if (count > 20) {
+                alert("You win!");
+            }
+        }
+    }
 }
 
 /** 
