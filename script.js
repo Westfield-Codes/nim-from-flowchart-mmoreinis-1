@@ -32,7 +32,7 @@ function main(){
 function playNim(){
     count = 0;
     while (count < 21) {
-        playerTurn();
+        userTurn();
         if (count > 21) {
             alert("You lose!");
         }
